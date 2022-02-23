@@ -10,16 +10,24 @@ h1 {
 </head>
 <body>
 
-<h1>Do you want to get the FLAG?.</h1>
+<h1>Do you want to get the FLAG?</h1>
 <p>I'm sure you'll like it</p>
 <a href="https://github.com/wynn1212/WebSecurityCourse">Don't forget to see my GitHub's WebSecuriytCourse repository.</a>
 <br>
 <br>
+<input type="checkbox" id="gimmie_flag" name="gimmie_flag" value="1">
+<label for="gimmie_flag">Click this box to give U a FLAG!</label><br>
 <button onclick="get_flag()">Gimmie the FLAG!</button>
 
 <script>
 function get_flag() {
-  alert("You got the flag: FLAG{Y0U_G0T_ME!}");
+  var obj=document.getElementsByName("gimmie_flag");
+  var len = obj.length;
+  var checked = false;
+  if(obj[0].checked == true)
+  	alert("You got the flag: FLAG{Y0U_G0T_ME!}");
+  else
+  	alert("You have to click the checkbox to GET a FLAG!");
 }
 </script>
 
